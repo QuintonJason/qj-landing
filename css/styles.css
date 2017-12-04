@@ -2406,13 +2406,13 @@
   color: #4099FF;
 }
 .landing-button-wrapper a:hover [class*=linkedin] {
-  color: #000000;
+  color: #0e76a8;
 }
 .landing-button-wrapper a:hover [class*=codepen] {
   color: #171515;
 }
 .landing-button-wrapper a:hover [class*=github] {
-  color: #0e76a8;
+  color: #000000;
 }
 /* ==|== Custom LESS Variables ===================================================== */
 /* ==|== Custom LESS Helpers ===================================================== */
