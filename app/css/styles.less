@@ -1,11 +1,11 @@
-@import url('less/less-media-queries.less');
+@import url("less/less-media-queries.less");
 
 /* =============================================================================
    Imports
    ========================================================================== */
 // @import url('jvfloat.less');
 // @import url('slick.less');
-@import url('fa/font-awesome.less');
+@import url("fa/font-awesome.less");
 // @import url('icomoon.less');
 
 /* =============================================================================
@@ -21,115 +21,131 @@
 
 /* Fonts ===================================================================== */
 
-
 /* ==|== CSS Styles, IDs & Elements ===================================================== */
 
-.landing-wrapper{
+.landing-wrapper {
 	min-height: 100vh;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
- 	align-items: center;
- 	resize: both;
- 	overflow: auto;
+	align-items: center;
+	resize: both;
+	overflow: auto;
 }
-.svg-wrapper{
+.svg-wrapper {
 	position: relative;
 	width: 50%;
 	height: 0;
 	padding-top: 34%;
 	margin: 0 auto;
 }
-#qj-logo{
+#qj-logo {
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
 }
-.landing-button-wrapper{
+.landing-button-wrapper {
 	width: 100%;
 	padding-top: 40px;
-	ul{
+	ul {
 		list-style: none;
 		padding-left: 0;
 		display: flex;
 		width: 100%;
 	}
-	li{
+	li {
 		flex: 1 auto;
 		text-align: center;
 	}
-	.fa{
+	.fa {
 		font-size: 3em;
 	}
-	a{
+	a {
 		color: #666;
-		transition: all .25s ease;
+		transition: all 0.25s ease;
 	}
-	a:hover{
-		[class*=facebook]{
-			color: #3b5998;	
+	a:hover {
+		[class*="facebook"] {
+			color: #3b5998;
 		}
-		[class*=twitter]{
-			color: #4099FF;	
+		[class*="twitter"] {
+			color: #4099ff;
 		}
-		[class*=linkedin]{
-			color: #0e76a8;	
+		[class*="linkedin"] {
+			color: #0e76a8;
 		}
-		[class*=codepen]{
-			color: #171515;	
+		[class*="codepen"] {
+			color: #171515;
 		}
-		[class*=github]{
-			color: #000000;	
+		[class*="github"] {
+			color: #000000;
 		}
 	}
-
 }
 
 /* ==|== Custom LESS Variables ===================================================== */
 
 /* ==|== Custom LESS Helpers ===================================================== */
 .hide-text {
-  position: absolute;
-  left: -10000px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  font-size: inherit;
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	font-size: inherit;
 }
-.headlines{  }
-.subhead{  }
-.bodycopy{  }
+.headlines {
+}
+.subhead {
+}
+.bodycopy {
+}
 
-.no-margin{ margin: 0; }
-.no-padding{ padding: 0; }
-.upper{ text-transform: uppercase; }
-.centered{ text-align: center; }
-.italic{ font-style: italic; }
-.no-bull{ list-style: none; }
-.show{ display: block; }
-.hide{ display: none; }
+.no-margin {
+	margin: 0;
+}
+.no-padding {
+	padding: 0;
+}
+.upper {
+	text-transform: uppercase;
+}
+.centered {
+	text-align: center;
+}
+.italic {
+	font-style: italic;
+}
+.no-bull {
+	list-style: none;
+}
+.show {
+	display: block;
+}
+.hide {
+	display: none;
+}
 
 /* ==|== Responsive Styles ===================================================== */
 
-@media @over320{
+@media @over320 {
 }
 
-@media @over650{	
+@media @over650 {
 }
 
-@media @over768{	
+@media @over768 {
 }
 
-@media @largeScreenOne{
+@media @largeScreenOne {
 }
 
-@media @largeScreenTwo{
+@media @largeScreenTwo {
 }
 
-@media @largeScreenThree{ 
+@media @largeScreenThree {
 }
-
