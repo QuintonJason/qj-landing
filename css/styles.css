@@ -2378,6 +2378,10 @@
   width: 100%;
   height: 100%;
 }
+#logo-pic {
+  visibility: hidden;
+  opacity: 0;
+}
 .landing-button-wrapper {
   width: 100%;
   padding-top: 40px;
@@ -2397,21 +2401,21 @@
 }
 .landing-button-wrapper a {
   color: #666;
-  transition: all .25s ease;
+  transition: all 0.25s ease;
 }
-.landing-button-wrapper a:hover [class*=facebook] {
+.landing-button-wrapper a:hover [class*="facebook"] {
   color: #3b5998;
 }
-.landing-button-wrapper a:hover [class*=twitter] {
-  color: #4099FF;
+.landing-button-wrapper a:hover [class*="twitter"] {
+  color: #4099ff;
 }
-.landing-button-wrapper a:hover [class*=linkedin] {
+.landing-button-wrapper a:hover [class*="linkedin"] {
   color: #0e76a8;
 }
-.landing-button-wrapper a:hover [class*=codepen] {
+.landing-button-wrapper a:hover [class*="codepen"] {
   color: #171515;
 }
-.landing-button-wrapper a:hover [class*=github] {
+.landing-button-wrapper a:hover [class*="github"] {
   color: #000000;
 }
 /* ==|== Custom LESS Variables ===================================================== */
