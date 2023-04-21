@@ -1,4 +1,3 @@
-/* Author: John Gibby @thatgibbyguy */
 
 // ==========================
 /* Store current location */
@@ -66,7 +65,6 @@ if (!$("html").hasClass("lt-ie9")) {
 /* Logo Work*/
 // ==============================================
 
-// when click on Logo
 var logo = document.getElementById("qj-logo");
 var logoQ = document.getElementById("logo-q");
 var logoJ = document.getElementById("logo-j");
@@ -82,16 +80,12 @@ tl
 	.to(logoQ, 0.75, { x: getCenter(logo, logoQ) }, "start");
 
 function getCenter(x, y) {
-	// get center of path inside SVG
 	var xWid = x.getBoundingClientRect().width;
 	var yWid = y.getBoundingClientRect().width;
-	return (xWid - yWid) / 2;
+	return ((xWid - yWid) / 2) - 10;
 }
 
 logo.onclick = function(e) {
-	// logo.classList.toggle("on");
-
-	// slide J from left(-91px) to orig spot and fadeIn if not expanded
 	if (logoExpanded) {
 		tl.play();
 	} else {
