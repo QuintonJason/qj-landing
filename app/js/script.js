@@ -65,6 +65,7 @@ if (!$("html").hasClass("lt-ie9")) {
 /* Logo Work*/
 // ==============================================
 
+// when click on Logo
 var logo = document.getElementById("qj-logo");
 var logoQ = document.getElementById("logo-q");
 var logoJ = document.getElementById("logo-j");
@@ -82,7 +83,7 @@ tl
 function getCenter(x, y) {
 	var xWid = x.getBoundingClientRect().width;
 	var yWid = y.getBoundingClientRect().width;
-	return ((xWid - yWid) / 2) - 10;
+	return ((xWid - yWid) / 2);
 }
 
 logo.onclick = function(e) {
