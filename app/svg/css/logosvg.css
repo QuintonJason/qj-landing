@@ -1,0 +1,41 @@
+.path {
+  stroke-dasharray: 2276;
+  stroke-dashoffset: 2276;
+  -webkit-animation: drawfade 4s linear forwards;
+  animation: drawfade 4s linear forwards;
+}
+@-webkit-keyframes drawfade {
+  50%,53% {
+    stroke-dashoffset: 1000;
+    fill: #ffffff;
+    stroke: rgba(0,0,0,1);
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: #6E6F71;
+    stroke: rgba(0,0,0,0);
+  }
+}
+keyframes drawfade {
+  50%,53% {
+    stroke-dashoffset: 1000;
+    fill: #ffffff;
+    stroke: rbga(0,0,0,1);
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: #6E6F71;
+    stroke: rgba(0,0,0,0);
+  }
+}
+
+/*THE FOLLOWING MEDIA QUERY ALLOWS THE SVG TO BE VISIBLE, BECAUSE THE DASHOFFSET IS ESSENTIALLY MAKING THE SVG DISAPPEAR*/
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+   .path {
+     stroke-dasharray: 0;
+     stroke-dashoffset: 0;
+     fill: #6E6F71;
+     stroke:rgba(0,0,0,0)
+   }
+}

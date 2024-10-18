@@ -1,0 +1,20 @@
+<svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="600" height="600">
+
+<defs>
+	<path id="textpath" d="M 100,300 a 200,200 0 1,1 0,1" />
+</defs>
+
+<text font-size="35em" transform="rotate(10,300,300)" x="1">
+	  <animateTransform attributeType="xml"
+        attributeName="transform"
+                   type="rotate"
+                   from="360 300 300"
+                   to="0 300 300"
+                   dur="10s"
+                   repeatCount="indefinite"/>
+	<textPath spacing="auto" xlink:href="#textpath">
+		Xdesign...Friday at Four...YAY... 
+	</textPath>
+</text>
+
+</svg>
