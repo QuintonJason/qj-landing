@@ -78,7 +78,9 @@ tl
 	.to(logoJ, 0.45, { x: "-=31" }, "start")
 	.to(logoPic, 0.35, { autoAlpha: 1 }, "start+=.3")
 	.to(logoJ, 0.5, { autoAlpha: 0 }, "start")
-	.to(logoQ, 0.75, { x: getCenter(logo, logoQ) }, "start");
+	// .to(logoQ, 0.75, { x: getCenter(logo, logoQ) }, "start");
+	.to(logoQ, 0.75, { x: "+=20" }, "start");
+
 
 function getCenter(x, y) {
 	var xWid = x.getBoundingClientRect().width;
