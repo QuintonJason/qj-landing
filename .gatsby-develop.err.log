@@ -1,0 +1,2 @@
+(node:52948) [DEP0128] DeprecationWarning: Invalid 'main' field in 'C:\Users\quint\Dev\qj-landing\node_modules\webpack-stats-plugin\package.json' of 'webpack-stats-plugin.js'. Please either fix that or report it to the module author
+(Use `node --trace-deprecation ...` to show where the warning was created)

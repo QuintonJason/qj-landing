@@ -1,0 +1,41 @@
+
+> quintonjason.github.io@1.0.0 develop
+> gatsby develop -p 8001 -H 127.0.0.1
+
+success delete html files from previous builds — 0.005 s
+success open and validate gatsby-config.js — 0.026 s
+success copy gatsby files — 0.015 s
+success onPreBootstrap — 0.003 s
+success source and transform nodes — 0.065 s
+success building schema — 0.123 s
+success createLayouts — 0.005 s
+success createPages — 0.044 s
+success createPagesStatefully — 0.015 s
+success onPreExtractQueries — 0.001 s
+success update schema — 0.038 s
+success extract queries from components — 0.045 s
+success run graphql queries — 0.048 s
+success write out page data — 0.002 s
+success write out redirect data — 0.000 s
+success onPostBootstrap — 0.000 s
+
+info bootstrap finished - 1.4665455 s
+
+ DONE  Compiled successfully in 1024ms5:54:34 PM
+
+
+You can now view quintonjason.github.io in the browser.
+
+  http://127.0.0.1:8001/
+
+View GraphiQL, an in-browser IDE, to explore your site's data and schema
+
+  http://127.0.0.1:8001/___graphql
+
+Note that the development build is not optimized.
+To create a production build, use gatsby build
+
+ WAIT  Compiling...5:54:34 PM
+
+ DONE  Compiled successfully in 43ms5:54:35 PM
+
