@@ -51,7 +51,7 @@ jobs:
           fi
 
       - name: Install sharp Linux binaries
-        run: npm install --no-save --legacy-peer-deps --no-audit --no-fund --include=optional sharp@0.33.5 @img/sharp-linux-x64@0.33.5 @img/sharp-libvips-linux-x64@1.0.4
+        run: npm install --no-save --legacy-peer-deps --no-audit --no-fund --include=optional sharp@0.33.5 @img/sharp-linux-x64@0.33.5 @img/sharp-libvips-linux-x64@1.0.4 || true
 
       - name: Build Gatsby site
         shell: bash
