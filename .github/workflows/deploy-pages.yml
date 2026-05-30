@@ -33,7 +33,7 @@ jobs:
         shell: bash
         run: |
           set +e
-          yarn install --frozen-lockfile --ignore-engines --non-interactive 2>&1 | tee install.log
+          yarn install --ignore-engines --non-interactive 2>&1 | tee install.log
           status=${PIPESTATUS[0]}
 
           if [ "$status" -ne 0 ]; then
