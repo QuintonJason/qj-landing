@@ -30,7 +30,27 @@ jobs:
           cache: yarn
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile --ignore-engines --non-interactive
+        shell: bash
+        run: |
+          set +e
+          yarn install --frozen-lockfile --ignore-engines --non-interactive 2>&1 | tee install.log
+          status=${PIPESTATUS[0]}
+
+          if [ "$status" -ne 0 ]; then
+            {
+              echo "### Install failure"
+              echo
+              echo '```text'
+              tail -80 install.log
+              echo '```'
+            } >> "$GITHUB_STEP_SUMMARY"
+
+            while IFS= read -r line; do
+              echo "::error::$line"
+            done < <(tail -30 install.log)
+
+            exit "$status"
+          fi
 
       - name: Build Gatsby site
         run: yarn build
