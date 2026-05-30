@@ -51,7 +51,27 @@ jobs:
           fi
 
       - name: Build Gatsby site
-        run: yarn build
+        shell: bash
+        run: |
+          set +e
+          yarn build 2>&1 | tee build.log
+          status=${PIPESTATUS[0]}
+
+          if [ "$status" -ne 0 ]; then
+            {
+              echo "### Gatsby build failure"
+              echo
+              echo '```text'
+              tail -100 build.log
+              echo '```'
+            } >> "$GITHUB_STEP_SUMMARY"
+
+            while IFS= read -r line; do
+              echo "::error::$line"
+            done < <(tail -40 build.log)
+
+            exit "$status"
+          fi
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
