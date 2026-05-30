@@ -27,54 +27,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 18
-          cache: yarn
-
-      - name: Install dependencies
-        shell: bash
-        run: |
-          set +e
-          yarn install --ignore-engines --non-interactive 2>&1 | tee install.log
-          status=${PIPESTATUS[0]}
-
-          if [ "$status" -ne 0 ]; then
-            {
-              echo "### Install completed with warnings/nonzero status"
-              echo
-              echo '```text'
-              tail -80 install.log
-              echo '```'
-            } >> "$GITHUB_STEP_SUMMARY"
-
-            while IFS= read -r line; do
-              echo "::warning::$line"
-            done < <(tail -30 install.log)
-          fi
-
-      - name: Install sharp Linux binaries
-        run: npm install --no-save --legacy-peer-deps --no-audit --no-fund --include=optional sharp@0.33.5 @img/sharp-linux-x64@0.33.5 @img/sharp-libvips-linux-x64@1.0.4 || true
-
-      - name: Build Gatsby site
-        shell: bash
-        run: |
-          set +e
-          yarn build 2>&1 | tee build.log
-          status=${PIPESTATUS[0]}
-
-          if [ "$status" -ne 0 ]; then
-            {
-              echo "### Gatsby build failure"
-              echo
-              echo '```text'
-              tail -100 build.log
-              echo '```'
-            } >> "$GITHUB_STEP_SUMMARY"
-
-            while IFS= read -r line; do
-              echo "::error::$line"
-            done < <(tail -40 build.log)
-
-            exit "$status"
-          fi
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
