@@ -108,9 +108,9 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
   });
 };
 
-// Copy redirects on build
-exports.onPostBuild = function() {
+exports.onPreBootstrap = function() {
   fs.copySync(`./data/images`, `./static/images`);
+  fs.copySync(`./data/images`, `./public/images`);
 };
 
 // exports.modifyWebpackConfig = ({ config, stage }) => {
